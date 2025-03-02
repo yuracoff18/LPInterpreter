@@ -59,7 +59,7 @@ En esta parte contamos con 2 funciones y importamos las funciones de la parte A 
 Esta funcion se encarga de evaluar si la expresion dada es una tautologia, una contradiccion o una contingencia por metodo de fuerza bruta.
 
 **_Explicacion detallada_**:  
-Esta funcion tendra ciclos anidados para cada atomo (Ya pre establecidos) y probara cada uno de sus valores de verdad mediante la funcion ya creada en la parte A (funcion val), almacenando estos valores en una lista. Cuando ya haya provado todos los valores, se hara un conteo de los valores retornados. En caso de que se encuentren solo unos (1) se devolvera 1 mostrando que es una tautologia, si solo encuentra ceros (0) devolvera 0 mostrando que es una contradiccion, pero si encuentra unos y ceros (1 y 0) se devolvera -1 mostrando que es una contingencia.
+Esta funcion tendra ciclos anidados con una lista de o y 1, alternando asi para cada atomo (atomos ya pre establecidos) y probara cada uno de sus valores de verdad mediante la funcion ya creada en la parte A (funcion val), almacenando estos valores en una lista. Cuando ya haya probado todos los valores, se hara un conteo de los valores retornados. En caso de que se encuentren solo unos (1) se devolvera 1 mostrando que es una tautologia, si solo encuentra ceros (0) devolvera 0 mostrando que es una contradiccion, pero si encuentra unos y ceros (1 y 0) se devolvera -1 mostrando que es una contingencia.
 
 
 ### Funcion main:
