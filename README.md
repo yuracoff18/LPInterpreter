@@ -2,7 +2,7 @@
 
 ### Yura Hernandez
 
-## Explicacion parte A
+## _Explicacion parte A_ **Collazos**
 En esta parte contamos con tres funciones y dos diccionarios globales.
 
 **Los diccionarios son:**  
@@ -50,7 +50,59 @@ Esto evaluara las expresiones internas de la expresion principal, volviendo a la
 ### Funcion main:
 La funcion main se encarga de leer los datos de entrada y establecer los valores de verdad para cada atomo en la expresion de logica proposicional.  
 
-## Explicacion parte B
+
+## _Explicacion parte A_ **Yura**
+En esta parte contamos con 4 funciones, dos diccionarios globales y una clase.  
+
+**Los diccionarios son:**  
+values  
+op  
+
+### Diccionario values:
+Este diccionario guardará los valores de verdad para cada atomo asignado al inicio del programa.  
+
+### Diccionario op (Operators):
+Este diccionario guarda los simbolos de & y | junto con su funcion. 
+
+
+### Clase node
+**La clase node cuenta con 3 atributos:**  
+- right  
+- center  
+- left  
+  
+y un metodo llamado **true_value**  
+- Lo que hace es evaluar lo que se tiene al lado izquierdo y derecho con el operador que esta situado en el centro.
+
+
+### Funcion no_space_str:  
+**Entrada: str**  
+**Salida: str**   
+Esta funcion recibe un string con espacios y lo devuelve sin ellos. 
+
+
+
+### Funcion valid_LP:
+**Entrada: LP**  
+**Salida: bool**  
+Esta funcion recibe la expresion de logica proposicional y la evalua usando el metodo de pila, adicioné como requisito que en los parentesis haya un operador en la mitad.
+
+
+### Funcion val:
+**Entrada: LP, start, end**  
+**Salida: bool**  
+  
+La funcion separa la expresion de logica proposicional dependiendo de su punto de partida, comenzando con el operador negacion y luego con el operador en el medio, para luego  devolver el valor de verdad de toda la expresion.
+
+**_Explicacion detallada_**:
+La funcion val recibe como entrada una expresion de logica proposicional, su posicion inicial y su posicion final. Primero se evalua que hay en su posicion inicial, si es un signo de not **(!)** negara todo lo que hay al frente de el entrando otra vez a la misma funcion pero con el punto de partida con un mas uno **(+1)** y activando la flag negation para saltar el siguiente proceso. Si el punto de partida no es un operador not comenzara el proceso de encontrar el indice del operador central, y una vez lo haya encontrado se creara un nodo el cual tendra en su lado izquierdo el valor de la expresion logica desde el punto inicial hasta el valor de la posicion del operador central menos uno **(-1)**, en la posicion central se pondra el operador y al lado derecho tendra el valor de la expresion logica desde la posicion del operador central mas uno **(+1)** hasta el final. Una vez creado el nodo dependiendo de si la expresion que se encuentra en los extremos es un atomo se convertira en su valor de verdad, si no la expresion entrará otra vez a la funcion val. Una vez haya vuelto, la variable ans tomara el valor del metodo **true_value** y lo retornará.
+
+
+### Funcion main:
+La funcion main se encarga de leer los datos y recibir el valor de la funcion **valid_LP** para continuar con la evaluacion de las expresiones de logica proposicional.
+
+
+## _Explicacion parte B_
 En esta parte contamos con 2 funciones y importamos las funciones de la parte A (val y string_to_list) junto con el diccionario values  
 
 ### Funcion prove_val: 

@@ -5,7 +5,7 @@
     Matematicas discretas
 
 """
-from parteA import val, string_to_list, values
+from parteA_collazos import val, string_to_list, values
 from sys import stdin
 
 
