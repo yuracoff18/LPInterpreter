@@ -102,7 +102,7 @@ def main():
         if valid_LP(LP):
             print(val(LP, 0, len(LP)-1))
         else:
-            print("Exprecion no valida")
+            print("Expresion no valida")
             
 
 if __name__ == "__main__":
