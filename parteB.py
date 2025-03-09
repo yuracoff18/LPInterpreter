@@ -23,6 +23,7 @@ def prove_val(LP):
                         values["t"] = t
                         
                         answers.append(val(LP, 0, len(LP)-1))
+    
     ans = None
     if answers.count(1) > 0 and answers.count(0) == 0:
         ans = 1
@@ -30,6 +31,7 @@ def prove_val(LP):
         ans = 0
     else:
         ans = -1
+        
     return ans
     
     
