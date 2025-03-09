@@ -55,7 +55,7 @@ def val(LP, start, end):
     negation = False
     
     if LP[start] == "!":
-        if LP[start + 1] == "(":
+        if LP[start + 1] == "(" or LP[start + 1] == "!":
             ans = not val(LP, start + 1, end)
         else:
             ans = not values[LP[start+1]]
